@@ -1,0 +1,157 @@
+local gameid = game.PlaceId
+if(gameid == 6913960180) then
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+--Function
+_G.UCMTautofarm = false
+
+function UCMTautofarm()
+	while _G.UCMTautofarm == true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(652.0986938476562, 120.48353576660156, 2725.77880859375)
+		wait()
+	end
+end
+
+--Page
+local MainUI = UILibrary.Load("Kaza Hub")
+local Main = MainUI.AddPage("Main")
+local Teleport = MainUI.AddPage("Teleport")
+local Gamepass = MainUI.AddPage("Gamepass")
+local Skin = MainUI.AddPage("Skin")
+
+--Main
+local FirstLabel = Main.AddLabel("Main") --- Section Label
+
+local FirstToggle = Main.AddToggle("Autofarm", false, function(Value) -- A Toggle button, also does what the function says
+    _G.UCMTautofarm = Value
+	UCMTautofarm()
+end)
+
+--Teleport
+local FirstLabel = Teleport.AddLabel("Teleport") --- Section Label
+
+local FirstButton = Teleport.AddButton("Lobby", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.40887451171875, 79.45940399169922, 1702.7874755859375)
+end)
+
+local FirstButton = Teleport.AddButton("Gamepass", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.55037689208984, 185.75978088378906, 1731.853759765625)
+end)
+
+local FirstButton = Teleport.AddButton("Character", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-593.8616943359375, 80.19505310058594, 1746.8380126953125)
+end)
+
+local FirstButton = Teleport.AddButton("Special Character", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(153.97584533691406, 179.64002990722656, 2154.4521484375)
+end)
+
+local FirstButton = Teleport.AddButton("Obby1", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-262.5124206542969, 221.54754638671875, 2651.53369140625)
+end)
+
+local FirstButton = Teleport.AddButton("Obby2", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(659.3025512695312, 138.5530242919922, 2165.9755859375)
+end)
+
+local FirstButton = Teleport.AddButton("Snowdin", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-517.73046875, 9.286508560180664, -1587.1041259765625)
+end)
+
+local FirstButton = Teleport.AddButton("Antivoid", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2283.93994140625, -1.9262279272079468, -1539.4366455078125)
+end)
+
+local FirstButton = Teleport.AddButton("Judgement Hall", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(542.3554077148438, -13.228025436401367, 168.31573486328125)
+end)
+
+local FirstButton = Teleport.AddButton("Outer Place", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4993.49462890625, 441.239013671875, -6970.34228515625)
+end)
+
+local FirstButton = Teleport.AddButton("City", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-534.5048217773438, 2817.26318359375, -5276.27734375)
+end)
+
+local FirstButton = Teleport.AddButton("Waterfall", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2239.9951171875, 76.73269653320312, -704.5991821289062)
+end)
+
+local FirstButton = Teleport.AddButton("Hotland", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2630.19995, 72.3161011, 509.419006, -0.0327591598, 4.38127508e-08, 0.99946326, 7.29198391e-09, 1, -4.35972716e-08, -0.99946326, 5.85986015e-09, -0.0327591598)
+end)
+
+local FirstButton = Teleport.AddButton("Dusttrust Judgement", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(709.960205078125, 238.98248291015625, -1979.4268798828125)
+end)
+
+--Gamepass
+local FirstLabel = Gamepass.AddLabel("You need to press many times") --- Section Label
+local FirstLabel = Gamepass.AddLabel("No Dust Evolution") --- Section Label
+
+local FirstButton = Gamepass.AddButton("Shadow Sans", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(224.57821655273438, 181.8653564453125, 1679.376708984375)
+end)
+
+local FirstButton = Gamepass.AddButton("Vantablack", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.71868896484375, 185.70977783203125, 1751.185791015625)
+end)
+
+local FirstButton = Gamepass.AddButton("AlphaCorrupted", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.184814453125, 173.0775909423828, 1417.8385009765625)
+end)
+
+local FirstButton = Gamepass.AddButton("AlphaCorrupted404", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(523.68994140625, 172.24423217773438, 1427.83935546875)
+end)
+
+local FirstButton = Gamepass.AddButton("LOADING", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(226.6802978515625, 186.11151123046875, 1774.673583984375)
+end)
+
+--Skin
+local FirstLabel = Skin.AddLabel("Some Skin") --- Section Label
+local FirstLabel = Skin.AddLabel("You need to press many times") --- Section Label
+
+local FirstButton = Skin.AddButton("Shadow but is Evil BF", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1182.9501953125, 112.42072296142578, 2136.25048828125)
+end)
+
+local FirstButton = Skin.AddButton("Loading Sans [Onee San From] (Black Hair)", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(497.0075988769531, 127.81153106689453, 1823.982666015625)
+end)
+
+local FirstButton = Skin.AddButton("Loading Sans [Onee San From] (White Hair)", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(506.4725036621094, 127.87336730957031, 1823.610595703125)
+end)
+
+local FirstButton = Skin.AddButton("Error Sans V2 [Girl Version]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-981.2767333984375, -33.162845611572266, 1066.7880859375)
+end)
+
+local FirstButton = Skin.AddButton("Player With Sailor + Cat ear", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-439.1143798828125, -111.79874420166016, 1500.3770751953125)
+end)
+
+local FirstButton = Skin.AddButton("TERROR [White]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-769.7811279296875, -29.351369857788086, 1812.0518798828125)
+end)
+
+local FirstButton = Skin.AddButton("Error Sans V2 [But is you]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1000.9672241210938, -33.366241455078125, 1070.675048828125)
+end)
+
+local FirstButton = Skin.AddButton("Error 404 V2 [Girl Version]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1411, -112, 2321)
+end)
+
+local FirstButton = Skin.AddButton("Time Paradox [Girl Version]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1392, -114, 1940)
+end)
+
+local FirstButton = Skin.AddButton("Alternate frisk [EYE]", function() --- Under Section & Function that controls what it does below
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1225, 87, 1542)
+end)
+
+end
