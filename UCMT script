@@ -6,7 +6,7 @@ game.workspace.GamepassCharacter.Alphatale.gamepass:destroy()
 game.workspace.GamepassCharacter.ShadowSans.gamepass:destroy()
 game.workspace.Box.VantaBlackSans.gamepass:destroy()
 game.workspace.Box.LoadingSans.gamepass:destroy()
-game.workspace.Character.TenNoKami.gamepass:destroy()
+game.workspace.Character:GetChildren()[173].gamepass:destroy()
 game.workspace.Box.LoadingSansGirlVersion.gamepass:destroy()
 
 --Function
