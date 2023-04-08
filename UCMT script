@@ -11,6 +11,17 @@ game.workspace.Box.LoadingSansGirlVersion.gamepass:destroy()
 
 --Function
 _G.UCMTautofarm = false
+_G.UCMTautocollect = false
+
+function UCMTautocollect()
+	while wait() do
+		if _G.UCMTautocollect == true then
+		for i, v in pairs(game:GetService("Workspace").Soul:GetChildren()) do
+		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
+	    end
+	end
+end
+end
 
 function UCMTautofarm()
 	while _G.UCMTautofarm == true do
@@ -31,6 +42,11 @@ local Skin = Main:CreateFrame("Skin")
 Toggle = Farm:CreateToggle("Auto Farm", "Auto Farm", function(value)
 	_G.UCMTautofarm = value
 	UCMTautofarm()
+end)
+
+Toggle = Farm:CreateToggle("Auto Collect", "Auto Collect", function(value)
+	_G.UCMTautocollect = value
+	UCMTautocollect()
 end)
 
 --Teleport
