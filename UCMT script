@@ -2,6 +2,14 @@ local gameid = game.PlaceId
 if(gameid == 6913960180) then
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
 
+game.workspace.GamepassCharacter.Alphatale.gamepass:destroy()
+game.workspace.GamepassCharacter.ShadowSans.gamepass:destroy()
+game.workspace.Box.VantaBlackSans.gamepass:destroy()
+game.workspace.Box.LoadingSans.gamepass:destroy()
+game.workspace.Character.TenNoKami.gamepass:destroy()
+game.workspace.Box.LoadingSansGirlVersion.gamepass:destroy()
+game.workspace.Character.TenNoKami.gamepass:destroy()
+
 --Function
 _G.UCMTautofarm = false
 _G.UCMTautocollect = false
