@@ -8,6 +8,8 @@ game.workspace.Box.VantaBlackSans.gamepass:destroy()
 game.workspace.Box.LoadingSans.gamepass:destroy()
 game.workspace.Character:GetChildren()[173].gamepass:destroy()
 game.workspace.Box.LoadingSansGirlVersion.gamepass:destroy()
+game.workspace.GamepassCharacter:GetChildren()[9].gamepass:destroy()
+game.workspace.Box.VantaBlackSansDemonLOrd.gamepass:destroy()
 
 --Function
 _G.UCMTautofarm = false
@@ -299,6 +301,13 @@ local Button = Skin:CreateButton({
 	Name = "Alternate frisk [EYE]",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1225, 87, 1542)
+	end,
+ })
+
+ local Button = Skin:CreateButton({
+	Name = "Demon Lord VantaBlack Sans",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 130, 1680)
 	end,
  })
 end
