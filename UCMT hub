@@ -1,0 +1,4 @@
+--This script make by An29kaza--
+--Working for any exploit
+--Can't executor 2 times
+loadstring(game:HttpGet("https://raw.githubusercontent.com/An28kaza/Kaza-Hub/main/UCMT%20script", true))()
