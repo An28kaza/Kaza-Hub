@@ -13,17 +13,6 @@ game.workspace.Box.VantaBlackSansDemonLOrd.gamepass:destroy()
 
 --Function
 _G.UCMTautofarm = false
-_G.UCMTautocollect = false
-
-function UCMTautocollect()
-	while wait(0.5) do
-		if _G.UCMTautocollect == true then
-		for i, v in pairs(game:GetService("Workspace").Soul:GetChildren()) do
-		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
-	    end
-	end
-end
-end
 
 function UCMTautofarm()
 	while _G.UCMTautofarm == true do
