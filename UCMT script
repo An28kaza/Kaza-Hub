@@ -1,6 +1,6 @@
 local gameid = game.PlaceId
 if(gameid == 6913960180) then
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/cypherdh/VanisUILIB/main/.gitignore'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 game.workspace.GamepassCharacter.Alphatale.gamepass:destroy()
 game.workspace.GamepassCharacter.ShadowSans.gamepass:destroy()
@@ -14,7 +14,7 @@ _G.UCMTautofarm = false
 _G.UCMTautocollect = false
 
 function UCMTautocollect()
-	while wait() do
+	while wait(0.5) do
 		if _G.UCMTautocollect == true then
 		for i, v in pairs(game:GetService("Workspace").Soul:GetChildren()) do
 		firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
@@ -31,151 +31,274 @@ function UCMTautofarm()
 end
 
 --Page
-local Window = library:CreateWindow("Kaza Hub", "1.1", 10044538000)
-local Main = Window:CreateTab("Main")
-local Farm = Main:CreateFrame("Farm")
-local Teleport = Main:CreateFrame("Teleport")
-local Gamepass = Main:CreateFrame("Gamepass")
-local Skin = Main:CreateFrame("Skin")
+local Window = Rayfield:CreateWindow({
+	Name = "Kaza Hub| 1.2",
+	LoadingTitle = "Welcome to Kaza Hub remake lol",
+	LoadingSubtitle = "by An28kaza",
+	ConfigurationSaving = {
+	   Enabled = false,
+	   FolderName = nil, -- Create a custom folder for your hub/game
+	   FileName = "Big Hub"
+	},
+	Discord = {
+	   Enabled = false,
+	   Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+	   RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+	},
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+	   Title = "Sirius Hub",
+	   Subtitle = "Key System",
+	   Note = "Join the discord (discord.gg/sirius)",
+	   FileName = "SiriusKey",
+	   SaveKey = true,
+	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+	   Key = "Hello"
+	}
+ })
 
---Farm
-Toggle = Farm:CreateToggle("Auto Farm", "Auto Farm", function(value)
-	_G.UCMTautofarm = value
+local Main = Window:CreateTab("Main") -- Title, Image
+local Teleport = Window:CreateTab("Teleport") -- Title, Image
+local Gamepass = Window:CreateTab("Gamepass") -- Title, Image
+local Skin = Window:CreateTab("Skin") -- Title, Image
+
+--Main
+local Toggle = Main:CreateToggle({
+	Name = "Auto Farm",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	_G.UCMTautofarm = Value
 	UCMTautofarm()
-end)
+	end,
+ })
 
-Toggle = Farm:CreateToggle("Auto Collect", "Auto Collect", function(value)
-	_G.UCMTautocollect = value
+ local Toggle = Main:CreateToggle({
+	Name = "Auto Collect",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	_G.UCMTautocollect = Value
 	UCMTautocollect()
-end)
+	end,
+ })
 
 --Teleport
-Button = Teleport:CreateButton("Lobby", "Teleport To Lobby", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.40887451171875, 79.45940399169922, 1702.7874755859375)
-end)
+local Button = Teleport:CreateButton({
+	Name = "Lobby",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.40887451171875, 79.45940399169922, 1702.7874755859375)
+	end,
+ })
 
-Button = Teleport:CreateButton("Gamepass", "Teleport To Gamepass", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.55037689208984, 185.75978088378906, 1731.853759765625)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Gamepass",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(126.55037689208984, 185.75978088378906, 1731.853759765625)
+	end,
+ })
 
-Button = Teleport:CreateButton("Character", "Teleport To Character", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-593.8616943359375, 80.19505310058594, 1746.8380126953125)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Character",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-593.8616943359375, 80.19505310058594, 1746.8380126953125)
+	end,
+ })
 
-Button = Teleport:CreateButton("Special Character", "Teleport To Special Character", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(153.97584533691406, 179.64002990722656, 2154.4521484375)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Special Character",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(153.97584533691406, 179.64002990722656, 2154.4521484375)
+	end,
+ })
 
-Button = Teleport:CreateButton("Obby1", "Teleport To Obby1", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-262.5124206542969, 221.54754638671875, 2651.53369140625)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Obby1",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-262.5124206542969, 221.54754638671875, 2651.53369140625)
+	end,
+ })
 
-Button = Teleport:CreateButton("Obby2", "Teleport To Obby2", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(659.3025512695312, 138.5530242919922, 2165.9755859375)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Obby2",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(659.3025512695312, 138.5530242919922, 2165.9755859375)
+	end,
+ })
 
-Button = Teleport:CreateButton("Snowdin", "Teleport To Snowdin", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-517.73046875, 9.286508560180664, -1587.1041259765625)
-end)
-	
-Button = Teleport:CreateButton("Antivoid", "Teleport To Antivoid", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2283.93994140625, -1.9262279272079468, -1539.4366455078125)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Snowdin",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-517.73046875, 9.286508560180664, -1587.1041259765625)
+	end,
+ })
 
-Button = Teleport:CreateButton("Judgement Hall", "Teleport To Judgement Hall", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(542.3554077148438, -13.228025436401367, 168.31573486328125)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Antivoid",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2283.93994140625, -1.9262279272079468, -1539.4366455078125)
+	end,
+ })
 
-Button = Teleport:CreateButton("Outer Place", "Teleport To Outer Place", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4993.49462890625, 441.239013671875, -6970.34228515625)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Judgement Hall",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(542.3554077148438, -13.228025436401367, 168.31573486328125)
+	end,
+ })
 
-Button = Teleport:CreateButton("City", "Teleport To City", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-534.5048217773438, 2817.26318359375, -5276.27734375)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Outer Place",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4993.49462890625, 441.239013671875, -6970.34228515625)
+	end,
+ })
 
-Button = Teleport:CreateButton("Waterfall", "Teleport To Waterfall", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2239.9951171875, 76.73269653320312, -704.5991821289062)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "City",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-534.5048217773438, 2817.26318359375, -5276.27734375)
+	end,
+ })
 
-Button = Teleport:CreateButton("Hotland", "Teleport To Hotland", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2630.19995, 72.3161011, 509.419006, -0.0327591598, 4.38127508e-08, 0.99946326, 7.29198391e-09, 1, -4.35972716e-08, -0.99946326, 5.85986015e-09, -0.0327591598)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Waterfall",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2239.9951171875, 76.73269653320312, -704.5991821289062)
+	end,
+ })
 
-Button = Teleport:CreateButton("Dusttrust Judgement", "Teleport To Dusttrust Judgement", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(709.960205078125, 238.98248291015625, -1979.4268798828125)
-end)
+ local Button = Teleport:CreateButton({
+	Name = "Hotland",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2630.19995, 72.3161011, 509.419006, -0.0327591598, 4.38127508e-08, 0.99946326, 7.29198391e-09, 1, -4.35972716e-08, -0.99946326, 5.85986015e-09, -0.0327591598)
+	end,
+ })
+
+ local Button = Teleport:CreateButton({
+	Name = "Dusttrust Judgement Hall",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(709.960205078125, 238.98248291015625, -1979.4268798828125)
+	end,
+ })
 
 --Gamepass
-Label = Gamepass:CreateLabel("No Dust Evolution")
-Label = Gamepass:CreateLabel("You need to press many times")
+local Label = Gamepass:CreateLabel("No Dust Evolution")
+local Label = Gamepass:CreateLabel("You Need To Press Many Times")
 
-Button = Gamepass:CreateButton("Shadow Sans", "Teleport To Shadow Sans Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(224.57821655273438, 181.8653564453125, 1679.376708984375)
-end)
+local Button = Gamepass:CreateButton({
+	Name = "Shadow Sans",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(224.57821655273438, 181.8653564453125, 1679.376708984375)
+	end,
+ })
 
-Button = Gamepass:CreateButton("Vantablack", "Teleport To Vantablack Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.71868896484375, 185.70977783203125, 1751.185791015625)
-end)
+ local Button = Gamepass:CreateButton({
+	Name = "Vantablack",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.71868896484375, 185.70977783203125, 1751.185791015625)
+	end,
+ })
 
-Button = Gamepass:CreateButton("AlphaCorrupted", "Teleport To AlphaCorrupted Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.184814453125, 173.0775909423828, 1417.8385009765625)
-end)
+ local Button = Gamepass:CreateButton({
+	Name = "AlphaCorrupted",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(524.184814453125, 173.0775909423828, 1417.8385009765625)
+	end,
+ })
 
-Button = Gamepass:CreateButton("AlphaCorrupted404", "Teleport To AlphaCorrupted404 Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(523.68994140625, 172.24423217773438, 1427.83935546875)
-end)
+ local Button = Gamepass:CreateButton({
+	Name = "AlphaCorrupted404",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(523.68994140625, 172.24423217773438, 1427.83935546875)
+	end,
+ })
 
-Button = Gamepass:CreateButton("Loading", "Teleport To Loading Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(226.6802978515625, 186.11151123046875, 1774.673583984375)
-end)
+ local Button = Gamepass:CreateButton({
+	Name = "LOADING",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(226.6802978515625, 186.11151123046875, 1774.673583984375)
+	end,
+ })
 
-Button = Gamepass:CreateButton("Ten No Kami", "Teleport To Ten No Kami Gamepass", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(222, 182, 1798)
-end)
+ local Button = Gamepass:CreateButton({
+	Name = "Ten No Kami",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(222, 182, 1798)
+	end,
+ })
 
 --Skin
-Label = Skin:CreateLabel("Some Skin")
-Label = Skin:CreateLabel("You need to press many times")
+local Label = Skin:CreateLabel("Some Skin")
+local Label = Skin:CreateLabel("You Need To Press Many Times")
 
-Button = Skin:CreateButton("Shadow but is Evil BF", "Teleport To Shadow but is Evil BF Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1182.9501953125, 112.42072296142578, 2136.25048828125)
-end)
+local Button = Skin:CreateButton({
+	Name = "Shadow but is Evil BF",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1182.9501953125, 112.42072296142578, 2136.25048828125)
+	end,
+ })
 
-Button = Skin:CreateButton("Loading Sans [Onee San From] (Black Hair)", "Teleport To Loading Sans [Onee San From] (Black Hair) Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(497.0075988769531, 127.81153106689453, 1823.982666015625)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Loading Sans [Onee San From] (Black Hair)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(497.0075988769531, 127.81153106689453, 1823.982666015625)
+	end,
+ })
 
-Button = Skin:CreateButton("Loading Sans [Onee San From] (White Hair)", "Teleport To Loading Sans [Onee San From] (White Hair) Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(506.4725036621094, 127.87336730957031, 1823.610595703125)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Loading Sans [Onee San From] (White Hair)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(506.4725036621094, 127.87336730957031, 1823.610595703125)
+	end,
+ })
 
-Button = Skin:CreateButton("Error Sans V2 [Girl Version]", "Teleport To Error Sans V2 [Girl Version] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-981.2767333984375, -33.162845611572266, 1066.7880859375)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Error Sans V2 [Girl Version]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-981.2767333984375, -33.162845611572266, 1066.7880859375)
+	end,
+ })
 
-Button = Skin:CreateButton("Player With Sailor + Cat ear", "Teleport To Player With Sailor + Cat ear Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-439.1143798828125, -111.79874420166016, 1500.3770751953125)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Player With Sailor + Cat ear",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-439.1143798828125, -111.79874420166016, 1500.3770751953125)
+	end,
+ })
 
-Button = Skin:CreateButton("TERROR [White]", "Teleport To TERROR [White] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-769.7811279296875, -29.351369857788086, 1812.0518798828125)
-end)
+ local Button = Skin:CreateButton({
+	Name = "TERROR [White]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-769.7811279296875, -29.351369857788086, 1812.0518798828125)
+	end,
+ })
 
-Button = Skin:CreateButton("Error Sans V2 [But is you]", "Teleport To Error Sans V2 [But is you] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1000.9672241210938, -33.366241455078125, 1070.675048828125)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Error Sans V2 [But is you]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1000.9672241210938, -33.366241455078125, 1070.675048828125)
+	end,
+ })
 
-Button = Skin:CreateButton("Error 404 V2 [Girl Version]", "Teleport To Error 404 V2 [Girl Version] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1411, -112, 2321)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Error 404 V2 [Girl Version]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1411, -112, 2321)
+	end,
+ })
 
-Button = Skin:CreateButton("Time Paradox [Girl Version]", "Teleport To Time Paradox [Girl Version] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1392, -114, 1940)
-end)
+ local Button = Skin:CreateButton({
+	Name = "Time Paradox [Girl Version]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1392, -114, 1940)
+	end,
+ })
 
-Button = Skin:CreateButton("Alternate frisk [EYE]", "Teleport To Alternate frisk [EYE] Skin", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1225, 87, 1542)
-end)
-
+ local Button = Skin:CreateButton({
+	Name = "Alternate frisk [EYE]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1225, 87, 1542)
+	end,
+ })
 end
