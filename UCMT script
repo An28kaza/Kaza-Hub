@@ -289,11 +289,4 @@ local Button = Skin:CreateButton({
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 130, 1680)
 	end,
  })
-
- local Button = Skin:CreateButton({
-	Name = "OMINI SANS Human From",
-	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-293, -99, 1281)
-	end,
- })
 end
