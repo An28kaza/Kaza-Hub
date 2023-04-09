@@ -64,6 +64,16 @@ local Toggle = Main:CreateToggle({
 	end,
  })
 
+ local Toggle = Main:CreateToggle({
+	Name = "Auto Collect",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	_G.UCMTautocollect = Value
+	UCMTautocollect()
+	end,
+ })
+
 --Teleport
 local Button = Teleport:CreateButton({
 	Name = "Lobby",
@@ -287,6 +297,13 @@ local Button = Skin:CreateButton({
 	Name = "Demon Lord VantaBlack Sans",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 130, 1680)
+	end,
+ })
+
+ local Button = Skin:CreateButton({
+	Name = "OMINI SANS Human From",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-293, -99, 1281)
 	end,
  })
 end
