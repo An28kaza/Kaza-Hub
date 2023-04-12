@@ -312,7 +312,7 @@ local gameid = game.PlaceId
 if(gameid == 9078157075) then
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(249, 34, 476)
-wait(18)
+wait(20)
 
 --Page
 local Window = Rayfield:CreateWindow({
