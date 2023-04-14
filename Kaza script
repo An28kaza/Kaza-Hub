@@ -366,14 +366,14 @@ local Button = Main:CreateButton({
 local Button = Teleport:CreateButton({
 	Name = "Lobby",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(818.4307861328125, 133.7074737548828, -500.6297912597656)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(685, 49, -373)
 	end,
  })
 
  local Button = Teleport:CreateButton({
 	Name = "Character",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(419.42767333984375, 25.909751892089844, 245.48141479492188)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(380, 25, 4027)
 	end,
  })
 
