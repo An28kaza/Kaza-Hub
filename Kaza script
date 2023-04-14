@@ -23,8 +23,8 @@ end
 
 --Page
 local Window = Rayfield:CreateWindow({
-	Name = "Kaza Hub| 1.2",
-	LoadingTitle = "Welcome to Kaza Hub remake lol",
+	Name = "Kaza Hub",
+	LoadingTitle = "Welcome to Kaza Hub",
 	LoadingSubtitle = "by An28kaza",
 	ConfigurationSaving = {
 	   Enabled = false,
@@ -61,16 +61,6 @@ local Toggle = Main:CreateToggle({
 	Callback = function(Value)
 	_G.UCMTautofarm = Value
 	UCMTautofarm()
-	end,
- })
-
- local Toggle = Main:CreateToggle({
-	Name = "Auto Collect",
-	CurrentValue = false,
-	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-	Callback = function(Value)
-	_G.UCMTautocollect = Value
-	UCMTautocollect()
 	end,
  })
 
@@ -299,24 +289,16 @@ local Button = Skin:CreateButton({
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 130, 1680)
 	end,
  })
-
- local Button = Skin:CreateButton({
-	Name = "OMINI SANS Human From",
-	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-293, -99, 1281)
-	end,
- })
 end
 
 local gameid = game.PlaceId
 if(gameid == 9078157075) then
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(249, 34, 476)
-wait(20)
 
 --Page
 local Window = Rayfield:CreateWindow({
-	Name = "Kaza Hub| 1.0",
+	Name = "Kaza Hub",
 	LoadingTitle = "Welcome to Kaza Hub",
 	LoadingSubtitle = "by An28kaza",
 	ConfigurationSaving = {
@@ -343,29 +325,33 @@ local Window = Rayfield:CreateWindow({
 --Page
 local Main = Window:CreateTab("Dangerous") -- Title, Image
 local Teleport = Window:CreateTab("Teleport") -- Title, Image
+local Section = Main:CreateSection("Wait the game fully loaded before use it")
 local Section = Main:CreateSection("Dangerous")
 
 --Function
 function UMOSunlockdoor()
 game.workspace.Doors:Destroy()
-game.workspace.other:GetChildren()[1067]:Destroy()
-game.workspace.other["Badge door"]:Destroy()
-game.workspace.other:GetChildren()[1087]:Destroy()
-game.workspace.other:GetChildren()[858]:Destroy()
-game.workspace.other:GetChildren()[1157]:Destroy()
-game.workspace.other:GetChildren()[1159]:Destroy()
-game.workspace.other:GetChildren()[1217]:Destroy()
-game.workspace.other:GetChildren()[857]:Destroy()
-game.workspace.other:GetChildren()[1088]:Destroy()
-game.workspace["Badge door"]:Destroy()
-game.workspace.other:GetChildren()[1224]:Destroy()
-game.workspace.other:GetChildren()[1093]:Destroy()
-game.workspace.other:GetChildren()[1158]:Destroy()
-game.workspace.other:GetChildren()[1232]:Destroy()
-game.workspace.other["GP Door"]:Destroy()
-game.workspace.other:GetChildren()[1252]:Destroy()
-game.workspace.other:GetChildren()[1257]:Destroy()
-game.workspace.other:GetChildren()[1261]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["GP Door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace["Badge door"]:Destroy()
+workspace["Badge door"]:Destroy()
 end
 
 --Main
