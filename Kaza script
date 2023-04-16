@@ -294,6 +294,12 @@ end
 local gameid = game.PlaceId
 if(gameid == 9078157075) then
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-161, 18, -21)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-496, 18, 814)
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1248, 18, -762)
+wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(249, 34, 476)
 
 --Page
@@ -339,6 +345,9 @@ workspace.other["GP Door"]:Destroy()
 workspace.other["GP Door"]:Destroy()
 workspace.other["GP Door"]:Destroy()
 workspace.other["GP Door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
+workspace.other["Badge door"]:Destroy()
 workspace.other["Badge door"]:Destroy()
 workspace.other["Badge door"]:Destroy()
 workspace.other["Badge door"]:Destroy()
