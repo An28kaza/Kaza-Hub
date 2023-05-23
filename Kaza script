@@ -138,7 +138,7 @@ local Button = Teleport:CreateButton({
  local Button = Teleport:CreateButton({
 	Name = "City",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-534.5048217773438, 2817.26318359375, -5276.27734375)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-512, 2809, -3478)
 	end,
  })
 
