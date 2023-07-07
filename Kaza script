@@ -28,7 +28,7 @@ local v = game.Workspace.Lobby.Head
 --Page
  local Window = ArrayField:CreateWindow({
     Name = "Kaza Hub",
-    LoadingTitle = "Welcome to Kaza Hub",
+    LoadingTitle = "Welcome to Kaza Hub| 1.3",
     LoadingSubtitle = "by An28kaza",
     ConfigurationSaving = {
         Enabled = true,
