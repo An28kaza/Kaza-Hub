@@ -376,9 +376,9 @@ local Label = Illegal:CreateLabel("This also play lobby music, pretty loud",Sect
 local Button = Illegal:CreateButton({
 	Name = "Active",
 	Callback = function()
-		firetouchinterest(playerhead, v, 1)
-        wait()
-        firetouchinterest(playerhead, v, 0)
+		v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		wait()
+		v.CFrame = CFrame.new(-244.018845, 86.2766113, 1836.29431, -0.999990225, 0, -0.00448873406, 0, 1, 0, 0.00448873406, 0, -0.999990225)
 	end,
  })
 
