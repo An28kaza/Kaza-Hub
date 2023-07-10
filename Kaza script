@@ -383,7 +383,7 @@ local Button = Illegal:CreateButton({
  })
  Illegal:CreateSpacing(nil,10)
 
-local Section = Illegal:CreateSection("Custom Character",false)
+local Section = Illegal:CreateSection("Custom Character",true)
 local Button = Illegal:CreateButton({
 	Name = "NIGHTMARE!!!! [Free]",
 	Callback = function()
