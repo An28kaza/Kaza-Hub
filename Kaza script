@@ -381,6 +381,19 @@ local Button = Illegal:CreateButton({
 		v.CFrame = CFrame.new(-244.018845, 86.2766113, 1836.29431, -0.999990225, 0, -0.00448873406, 0, 1, 0, 0.00448873406, 0, -0.999990225)
 	end,
  })
+ Illegal:CreateSpacing(nil,10)
+
+local Section = Illegal:CreateSection("Custom Character",false)
+local Button = Illegal:CreateButton({
+	Name = "NIGHTMARE!!!! [Free]",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-764, 52, 1245)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1141, 79, 1816)
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1062, 79, 1811)
+	end,
+ })
 
 end
 
