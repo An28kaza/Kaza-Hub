@@ -513,3 +513,164 @@ local Button = Teleport:CreateButton({
 	end,
  })
 end
+
+if(gameid == 13754776367) then
+local ArrayField = loadstring(game:HttpGet('https://raw.githubusercontent.com/An28kaza/Kaza-Hub/main/Arrayfield'))()
+
+workspace.CHARACTERSTUFF["CHARACTER BOX"].ShadowSans.Buy.Aniti.ANITIgamepass:Destroy()
+
+--Function
+_G.UROTM = false
+local torso = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+function UROTM()
+spawn (function()
+	while _G.UROTM == true do
+for i, v in pairs(game:GetService("Workspace").CHEST:GetChildren()) do
+	if _G.UROTM == true then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+		wait(0.1)
+	end
+	end
+end
+end)
+end
+
+--Page
+local Window = ArrayField:CreateWindow({
+	Name = "Kaza Hub",
+	LoadingTitle = "Kaza Hub| 1.0",
+	LoadingSubtitle = "by An28kaza",
+	ConfigurationSaving = {
+	   Enabled = true,
+	   FolderName = nil, -- Create a custom folder for your hub/game
+	   FileName = "ArrayField"
+	},
+	Discord = {
+	   Enabled = false,
+	   Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+	   RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+	},
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+	   Title = "Untitled",
+	   Subtitle = "Key System",
+	   Note = "No method of obtaining the key is provided",
+	   FileName = "Key", -- It is recommended to use something unique as other scripts using ArrayField may overwrite your key file
+	   SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
+	   Actions = {
+			 [1] = {
+				 Text = 'Click here to copy the key link <--',
+				 OnPress = function()
+					 print('Pressed')
+				 end,
+				 }
+			 },
+	   Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+	}
+ })
+
+ local Main = Window:CreateTab("Main") -- Title, Image
+ local Special = Window:CreateTab("Special") -- Title, Image
+
+--Main
+local Section = Main:CreateSection("Auto Farm",false)
+local Label = Main:CreateLabel("Must be human form",Section)
+local Toggle = Main:CreateToggle({
+	Name = "Auto Farm",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	_G.UROTM = Value
+	UROTM()
+	end,
+ })
+
+--Teleport
+local Section = Main:CreateSection("Teleport",true)
+local Label = Main:CreateLabel("Teleport to Lobby will make all your items get remove",Section)
+local Button = Main:CreateButton({
+	Name = "Lobby",
+	Interact = 'Click',
+	Callback = function()
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(151, 26, 388)
+	end,
+ })
+
+local Button = Main:CreateButton({
+	Name = "Undertale",
+	Interact = 'Click',
+	Callback = function()
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1438, 933, -1960)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Horrortale",
+	Interact = 'Click',
+	Callback = function()
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1608, 1269, -2078)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Weird Place",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3401, 966, -905)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Dusttrust Place",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4804, 1119, -5085)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Judgement Hall",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1778, 1185, 61)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Anti Void",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6186, 1716, -295)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "Doodle Sphere",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4771, 1814, 1646)
+	end,
+ })
+
+ local Button = Main:CreateButton({
+	Name = "City",
+	Interact = 'Click',
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1074, 1409, -4945)
+	end,
+ })
+
+--Special
+local Section = Special:CreateSection("Gamepass Character",false)
+local Label = Special:CreateLabel("You Need To Press Many Times",Section)
+local Button = Special:CreateButton({
+	Name = "ShadowSans",
+	Interact = 'Click',
+	Callback = function()
+	    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1017, 217, -416)
+	end,
+ })
+
+end
