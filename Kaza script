@@ -588,7 +588,7 @@ local Toggle = Main:CreateToggle({
  })
 
 --Teleport
-local Section = Main:CreateSection("Teleport",true)
+local Section = Main:CreateSection("Teleport",false)
 local Label = Main:CreateLabel("Teleport to Lobby will make all your items get remove",Section)
 local Button = Main:CreateButton({
 	Name = "Lobby",
